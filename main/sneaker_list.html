@@ -1,0 +1,7 @@
+{% for sneaker in sneakers %}
+    <h2><a href="{% url 'sneaker_shop:sneaker_detail' sneaker.pk %}">{{ sneaker.name }}</a></h2>
+    <p>Brand: {{ sneaker.brand }}</p>
+    <p>Color: {{ sneaker.color }}</p>
+    <p>Price: {{ sneaker.price }}</p>
+    <p><a href="{% url 'sneaker_shop:sneaker_detail' sneaker.pk %}">More Info</a></p>
+{% endfor %}
